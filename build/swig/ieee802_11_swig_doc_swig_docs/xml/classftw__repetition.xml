@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="classftw__repetition" kind="class" prot="public">
+    <compoundname>ftw_repetition</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">gr_block</basecompoundref>
+    <includes refid="ftw__repetition_8h" local="no">ftw_repetition.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classftw__repetition_1ae5aca10fbeaaf76e7b49f7aeb869a4f6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftw_repetition::d_symbol_length</definition>
+        <argsstring></argsstring>
+        <name>d_symbol_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_repetition.h" line="45" bodyfile="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_repetition.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classftw__repetition_1afaf5ae70208911a6615d71fcdd9eab0b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftw_repetition::d_repetition</definition>
+        <argsstring></argsstring>
+        <name>d_repetition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_repetition.h" line="46" bodyfile="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_repetition.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classftw__repetition_1a82640724e0086eac789b64b2545935f2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftw_repetition::d_N_symbols</definition>
+        <argsstring></argsstring>
+        <name>d_N_symbols</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_repetition.h" line="47" bodyfile="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_repetition.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classftw__repetition_1a9f381737f59c829826de7e3e53b42871" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="ftw__repetition_8h_1a1899f91efd5e5dcd876bfb5d25ead353" kindref="member">ftw_repetition_sptr</ref></type>
+        <definition>ftw_repetition_sptr ftw_make_repetition</definition>
+        <argsstring>(int symbol_length, int repetition, int N_symbols)</argsstring>
+        <name>ftw_make_repetition</name>
+        <param>
+          <type>int</type>
+          <declname>symbol_length</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>repetition</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N_symbols</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_repetition.h" line="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classftw__repetition_1a61cbd92f4ea688bcd895a0a549d867ad" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ftw_repetition::ftw_repetition</definition>
+        <argsstring>(int symbol_length, int repetition, int N_symbols)</argsstring>
+        <name>ftw_repetition</name>
+        <param>
+          <type>int</type>
+          <declname>symbol_length</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>repetition</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N_symbols</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_repetition.h" line="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classftw__repetition_1af972422bdc5ef78d1b9eeae993f81d17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ftw_repetition::~ftw_repetition</definition>
+        <argsstring>()</argsstring>
+        <name>~ftw_repetition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_repetition.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classftw__repetition_1abd7cb15ddf89bbbf4716885687944b9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ftw_repetition::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_repetition.h" line="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="17">
+        <label>gr_block</label>
+      </node>
+      <node id="16">
+        <label>ftw_repetition</label>
+        <link refid="classftw__repetition"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="19">
+        <label>gr_block</label>
+      </node>
+      <node id="18">
+        <label>ftw_repetition</label>
+        <link refid="classftw__repetition"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_repetition.h" line="37" bodyfile="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_repetition.h" bodystart="36" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classftw__repetition_1a82640724e0086eac789b64b2545935f2" prot="private" virt="non-virtual"><scope>ftw_repetition</scope><name>d_N_symbols</name></member>
+      <member refid="classftw__repetition_1afaf5ae70208911a6615d71fcdd9eab0b" prot="private" virt="non-virtual"><scope>ftw_repetition</scope><name>d_repetition</name></member>
+      <member refid="classftw__repetition_1ae5aca10fbeaaf76e7b49f7aeb869a4f6" prot="private" virt="non-virtual"><scope>ftw_repetition</scope><name>d_symbol_length</name></member>
+      <member refid="classftw__repetition_1a9f381737f59c829826de7e3e53b42871" prot="private" virt="non-virtual"><scope>ftw_repetition</scope><name>ftw_make_repetition</name></member>
+      <member refid="classftw__repetition_1a61cbd92f4ea688bcd895a0a549d867ad" prot="protected" virt="non-virtual"><scope>ftw_repetition</scope><name>ftw_repetition</name></member>
+      <member refid="classftw__repetition_1abd7cb15ddf89bbbf4716885687944b9f" prot="public" virt="non-virtual"><scope>ftw_repetition</scope><name>general_work</name></member>
+      <member refid="classftw__repetition_1af972422bdc5ef78d1b9eeae993f81d17" prot="public" virt="non-virtual"><scope>ftw_repetition</scope><name>~ftw_repetition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

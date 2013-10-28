@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<block>
+	<name>OFDM Symbol Mapper</name>
+	<key>ieee802_1_ofdm_symbol_mapper</key>
+	<category>IEEE802.11</category>
+	<import>import gnuradio.ieee802_11 as gr_ieee802_11</import>
+	<make>gr_ieee802_11.ofdm_symbol_mapper($constellation,$msgq_limit,$occupied_carriers,$fft_length,$debug)</make>
+
+	<param>
+		<name>Debug</name>
+		<key>debug</key>
+		<value>False</value>
+		<type>bool</type>
+
+		<option>
+			<name>Enable</name>
+			<key>True</key>
+		</option>
+		<option>
+			<name>Disable</name>
+			<key>False</key>
+		</option></param>
+	<param>
+		<name>Constellation</name>
+		<key>constellation</key>
+		<value>64</value>
+		<type>complex</type></param>
+	<param>
+		<name>Message Queue Limit</name>
+		<key>msgq_limit</key>
+		<value>100</value>
+		<type>int</type></param>
+	<param>
+		<name>Occupied Carriers</name>
+		<key>occupied_carriers</key>
+		<value>48</value>
+		<type>int</type></param>
+	<param>
+		<name>FFT Length</name>
+		<key>fft_length</key>
+		<value>64</value>
+		<type>int</type></param>
+
+	<sink>
+		<name>in</name>
+		<type>message</type>
+	</sink>
+
+	<source>
+		<name>out</name>
+		<type>complex</type>
+		<vlen>occupied_carriers</vlen>
+		<nports>1</nports>
+	</source>
+	<source>
+		<name>out flag</name>
+		<type>char</type>
+		<nports>1</nports></source>
+
+</block>
+
+
+

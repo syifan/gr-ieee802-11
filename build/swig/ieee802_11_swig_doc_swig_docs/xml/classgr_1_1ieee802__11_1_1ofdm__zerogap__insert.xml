@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="classgr_1_1ieee802__11_1_1ofdm__zerogap__insert" kind="class" prot="public">
+    <compoundname>gr::ieee802_11::ofdm_zerogap_insert</compoundname>
+    <basecompoundref prot="public" virt="virtual">gr_block</basecompoundref>
+    <includes refid="ofdm__zerogap__insert_8h" local="no">ofdm_zerogap_insert.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1ieee802__11_1_1ofdm__zerogap__insert_1a77f94cc81401d254bcc3e07b885d88cb" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1ieee802__11_1_1ofdm__zerogap__insert" kindref="compound">ofdm_zerogap_insert</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;ofdm_zerogap_insert&gt; gr::ieee802_11::ofdm_zerogap_insert::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ofdm_zerogap_insert.h" line="14" bodyfile="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ofdm_zerogap_insert.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1ieee802__11_1_1ofdm__zerogap__insert_1a8d2f596007edc2af75a85664b41c213e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1ieee802__11_1_1ofdm__zerogap__insert_1a77f94cc81401d254bcc3e07b885d88cb" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::ieee802_11::ofdm_zerogap_insert::make</definition>
+        <argsstring>(int symbol_length, int N_symbols, const std::vector&lt; std::vector&lt; gr_complex &gt; &gt; &amp;zerogap, bool debug=false)</argsstring>
+        <name>make</name>
+        <param>
+          <type>int</type>
+          <declname>symbol_length</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N_symbols</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; gr_complex &gt; &gt; &amp;</type>
+          <declname>zerogap</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>debug</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ofdm_zerogap_insert.h" line="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="69">
+        <label>gr_block</label>
+      </node>
+      <node id="68">
+        <label>gr::ieee802_11::ofdm_zerogap_insert</label>
+        <link refid="classgr_1_1ieee802__11_1_1ofdm__zerogap__insert"/>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="71">
+        <label>gr_block</label>
+      </node>
+      <node id="70">
+        <label>gr::ieee802_11::ofdm_zerogap_insert</label>
+        <link refid="classgr_1_1ieee802__11_1_1ofdm__zerogap__insert"/>
+        <childnode refid="71" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ofdm_zerogap_insert.h" line="11" bodyfile="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ofdm_zerogap_insert.h" bodystart="10" bodyend="17"/>
+    <listofallmembers>
+      <member refid="classgr_1_1ieee802__11_1_1ofdm__zerogap__insert_1a8d2f596007edc2af75a85664b41c213e" prot="public" virt="non-virtual"><scope>gr::ieee802_11::ofdm_zerogap_insert</scope><name>make</name></member>
+      <member refid="classgr_1_1ieee802__11_1_1ofdm__zerogap__insert_1a77f94cc81401d254bcc3e07b885d88cb" prot="public" virt="non-virtual"><scope>gr::ieee802_11::ofdm_zerogap_insert</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="classftw__ofdm__preamble" kind="class" prot="public">
+    <compoundname>ftw_ofdm_preamble</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">gr_block</basecompoundref>
+    <includes refid="ftw__ofdm__preamble_8h" local="no">ftw_ofdm_preamble.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classftw__ofdm__preamble_1a8633af70c64286c14d108da6208cfd1f" prot="private" static="no">
+        <name>state_t</name>
+        <enumvalue id="classftw__ofdm__preamble_1a8633af70c64286c14d108da6208cfd1fa1a74f4ef2528e74db4be9519c131fb8c" prot="private">
+          <name>ST_IDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classftw__ofdm__preamble_1a8633af70c64286c14d108da6208cfd1fa41dc9aa89b5c35f9e4199b2ddac278e2" prot="private">
+          <name>ST_FIRST_PAYLOAD_AND_PREAMBLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" line="48" bodyfile="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" bodystart="48" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classftw__ofdm__preamble_1a243a642b8081cfc55c0acab0312dd667" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftw_ofdm_preamble::d_symbol_length</definition>
+        <argsstring></argsstring>
+        <name>d_symbol_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" line="53" bodyfile="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classftw__ofdm__preamble_1a36886fe4adc3ceab996b88cae44db642" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftw_ofdm_preamble::d_N_symbols</definition>
+        <argsstring></argsstring>
+        <name>d_N_symbols</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" line="54" bodyfile="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classftw__ofdm__preamble_1a0603e3ef2cf68644754e0831761b8bbe" prot="private" static="no" mutable="no">
+        <type>const std::vector&lt; std::vector&lt; gr_complex &gt; &gt;</type>
+        <definition>const std::vector&lt;std::vector&lt;gr_complex&gt; &gt; ftw_ofdm_preamble::d_preamble</definition>
+        <argsstring></argsstring>
+        <name>d_preamble</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" line="55" bodyfile="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classftw__ofdm__preamble_1aeb9bee7b0e54215752a4a841224b857a" prot="private" static="no" mutable="no">
+        <type>state_t</type>
+        <definition>state_t ftw_ofdm_preamble::d_state</definition>
+        <argsstring></argsstring>
+        <name>d_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" line="56" bodyfile="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classftw__ofdm__preamble_1a514f48b98ff8f6421c26d5959a3fabc9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftw_ofdm_preamble::d_nsymbols_output</definition>
+        <argsstring></argsstring>
+        <name>d_nsymbols_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" line="57" bodyfile="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classftw__ofdm__preamble_1ac2244d5b99424a1db5fb3b866704b197" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftw_ofdm_preamble::d_pending_flag</definition>
+        <argsstring></argsstring>
+        <name>d_pending_flag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" line="58" bodyfile="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classftw__ofdm__preamble_1a459b728586d982b3d03bd769214979f7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="ftw__ofdm__preamble_8h_1af4ce928dfb6c8a3a93e957ee31229071" kindref="member">ftw_ofdm_preamble_sptr</ref></type>
+        <definition>ftw_ofdm_preamble_sptr ftw_make_ofdm_preamble</definition>
+        <argsstring>(int symbol_length, int N_symbols, const std::vector&lt; std::vector&lt; gr_complex &gt; &gt; &amp;preamble)</argsstring>
+        <name>ftw_make_ofdm_preamble</name>
+        <param>
+          <type>int</type>
+          <declname>symbol_length</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N_symbols</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; gr_complex &gt; &gt; &amp;</type>
+          <declname>preamble</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" line="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classftw__ofdm__preamble_1a377b8ed3509909f50129a00a4392d5de" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ftw_ofdm_preamble::ftw_ofdm_preamble</definition>
+        <argsstring>(int symbol_length, int N_symbols, const std::vector&lt; std::vector&lt; gr_complex &gt; &gt; &amp;preamble)</argsstring>
+        <name>ftw_ofdm_preamble</name>
+        <param>
+          <type>int</type>
+          <declname>symbol_length</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N_symbols</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; gr_complex &gt; &gt; &amp;</type>
+          <declname>preamble</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" line="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classftw__ofdm__preamble_1ae3dcfe7dbd387170a491cfac7f00b92c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ftw_ofdm_preamble::enter_idle</definition>
+        <argsstring>()</argsstring>
+        <name>enter_idle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classftw__ofdm__preamble_1af6999110dd476cfd007ffb339c493b47" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ftw_ofdm_preamble::enter_first_payload_and_preamble</definition>
+        <argsstring>()</argsstring>
+        <name>enter_first_payload_and_preamble</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" line="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classftw__ofdm__preamble_1a4085f8c27a179f403e1fb8e06c4c7ed9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ftw_ofdm_preamble::~ftw_ofdm_preamble</definition>
+        <argsstring>()</argsstring>
+        <name>~ftw_ofdm_preamble</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classftw__ofdm__preamble_1a11552b483ca157efdbcc29733e1f4327" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ftw_ofdm_preamble::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_v, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_v</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" line="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="13">
+        <label>gr_block</label>
+      </node>
+      <node id="12">
+        <label>ftw_ofdm_preamble</label>
+        <link refid="classftw__ofdm__preamble"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>gr_block</label>
+      </node>
+      <node id="14">
+        <label>ftw_ofdm_preamble</label>
+        <link refid="classftw__ofdm__preamble"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" line="38" bodyfile="/home/yifansun/gr-ieee802-11/include/gnuradio/ieee802_11/ftw_ofdm_preamble.h" bodystart="37" bodyend="72"/>
+    <listofallmembers>
+      <member refid="classftw__ofdm__preamble_1a36886fe4adc3ceab996b88cae44db642" prot="private" virt="non-virtual"><scope>ftw_ofdm_preamble</scope><name>d_N_symbols</name></member>
+      <member refid="classftw__ofdm__preamble_1a514f48b98ff8f6421c26d5959a3fabc9" prot="private" virt="non-virtual"><scope>ftw_ofdm_preamble</scope><name>d_nsymbols_output</name></member>
+      <member refid="classftw__ofdm__preamble_1ac2244d5b99424a1db5fb3b866704b197" prot="private" virt="non-virtual"><scope>ftw_ofdm_preamble</scope><name>d_pending_flag</name></member>
+      <member refid="classftw__ofdm__preamble_1a0603e3ef2cf68644754e0831761b8bbe" prot="private" virt="non-virtual"><scope>ftw_ofdm_preamble</scope><name>d_preamble</name></member>
+      <member refid="classftw__ofdm__preamble_1aeb9bee7b0e54215752a4a841224b857a" prot="private" virt="non-virtual"><scope>ftw_ofdm_preamble</scope><name>d_state</name></member>
+      <member refid="classftw__ofdm__preamble_1a243a642b8081cfc55c0acab0312dd667" prot="private" virt="non-virtual"><scope>ftw_ofdm_preamble</scope><name>d_symbol_length</name></member>
+      <member refid="classftw__ofdm__preamble_1af6999110dd476cfd007ffb339c493b47" prot="private" virt="non-virtual"><scope>ftw_ofdm_preamble</scope><name>enter_first_payload_and_preamble</name></member>
+      <member refid="classftw__ofdm__preamble_1ae3dcfe7dbd387170a491cfac7f00b92c" prot="private" virt="non-virtual"><scope>ftw_ofdm_preamble</scope><name>enter_idle</name></member>
+      <member refid="classftw__ofdm__preamble_1a459b728586d982b3d03bd769214979f7" prot="private" virt="non-virtual"><scope>ftw_ofdm_preamble</scope><name>ftw_make_ofdm_preamble</name></member>
+      <member refid="classftw__ofdm__preamble_1a377b8ed3509909f50129a00a4392d5de" prot="protected" virt="non-virtual"><scope>ftw_ofdm_preamble</scope><name>ftw_ofdm_preamble</name></member>
+      <member refid="classftw__ofdm__preamble_1a11552b483ca157efdbcc29733e1f4327" prot="public" virt="non-virtual"><scope>ftw_ofdm_preamble</scope><name>general_work</name></member>
+      <member refid="classftw__ofdm__preamble_1a8633af70c64286c14d108da6208cfd1fa41dc9aa89b5c35f9e4199b2ddac278e2" prot="private" virt="non-virtual"><scope>ftw_ofdm_preamble</scope><name>ST_FIRST_PAYLOAD_AND_PREAMBLE</name></member>
+      <member refid="classftw__ofdm__preamble_1a8633af70c64286c14d108da6208cfd1fa1a74f4ef2528e74db4be9519c131fb8c" prot="private" virt="non-virtual"><scope>ftw_ofdm_preamble</scope><name>ST_IDLE</name></member>
+      <member refid="classftw__ofdm__preamble_1a8633af70c64286c14d108da6208cfd1f" prot="private" virt="non-virtual"><scope>ftw_ofdm_preamble</scope><name>state_t</name></member>
+      <member refid="classftw__ofdm__preamble_1a4085f8c27a179f403e1fb8e06c4c7ed9" prot="public" virt="non-virtual"><scope>ftw_ofdm_preamble</scope><name>~ftw_ofdm_preamble</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
