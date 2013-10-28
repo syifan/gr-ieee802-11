@@ -1,7 +1,0 @@
-/home/yifansun/gr-ieee802-11/build/swig/CMakeFiles/_ieee802_11_swig.dir
-/home/yifansun/gr-ieee802-11/build/swig/CMakeFiles/_ieee802_11_swig_doc_tag.dir
-/home/yifansun/gr-ieee802-11/build/swig/CMakeFiles/_ieee802_11_swig_swig_tag.dir
-/home/yifansun/gr-ieee802-11/build/lib/CMakeFiles/gnuradio-ieee802_11.dir
-/home/yifansun/gr-ieee802-11/build/python/CMakeFiles/pygen_python_cd63b.dir
-/home/yifansun/gr-ieee802-11/build/swig/CMakeFiles/pygen_swig_4fa95.dir
-/home/yifansun/gr-ieee802-11/build/CMakeFiles/uninstall.dir
