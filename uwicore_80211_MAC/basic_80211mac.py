@@ -98,6 +98,7 @@ def main():
     """
     beta = options.beta # scaling time parameter
     tslot = options.time_slot * beta
+ 
     SIFS = options.SIFS * beta
     DIFS = SIFS + 2 * tslot
     Preamble = DIFS #16e-6
@@ -111,6 +112,8 @@ def main():
     # TX time estimation for a CTS and an ACK packet
     empty_values = {"duration":0, "mac_ra":my_mac, "timestamp":time.time()}  
     CTS_empty = MAC.generate_pkt("CTS", options.interp, options.regime, empty_values)
+
+    
     T_cts = CTS_empty["INFO"]["txtime"]
     ACK_empty = MAC.generate_pkt("ACK", options.interp, options.regime, empty_values)
     T_ack = ACK_empty["INFO"]["txtime"]
