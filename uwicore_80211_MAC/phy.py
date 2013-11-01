@@ -318,7 +318,7 @@ def main():
     parser.add_option("-G", "--txgain", type="int", default=10 , help = "set USRP2 Tx GAIN in [dB] [default=%default]")
 
     parser.add_option("-n", "--norm", type="eng_float", default=0.3 , help="set gain factor for complex baseband floats [default=%default]")
-    parser.add_option("-N", "--Node", type="intx", default=2, help="USRP2 node    [default=%default]")
+    parser.add_option("-N", "--Node", type="intx", default=1, help="USRP2 node    [default=%default]")
 
     parser.add_option("-r", "--repetition", type="int", default=1 , help="set number of frame-copies to send, 0=infinite [default=%default] ")
 

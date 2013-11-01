@@ -95,8 +95,8 @@ void parse(pmt::pmt_t msg) {
 
 	dout << std::endl << "new mac frame  (length " << data_len << ")" << std::endl;
 	dout << "=========================================" << std::endl;
-	if(data_len < 20) {
-		dout << "frame too short to parse (<20)" << std::endl;
+	if(data_len < 10) {
+		dout << "frame too short to parse (<10)" << std::endl;
 		return;
 	}
 	#define HEX(a) std::hex << std::setfill('0') << std::setw(2) << int(a) << std::dec
@@ -135,7 +135,8 @@ void parse(pmt::pmt_t msg) {
 	dout << (crc ? "correct" : "wrong") << std::endl;
 
 
-	if(!crc || data_len < 32) {
+//	if(!crc || data_len < 32) {
+	if(!crc || data_len < 10) {
 		return;
 	}
 

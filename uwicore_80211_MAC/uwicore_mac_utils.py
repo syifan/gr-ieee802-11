@@ -162,7 +162,7 @@ def get_BEACON_info(payload, regime, symboltime):
 def get_CTS_info(payload, regime, symboltime):
 
         # MAC header for a CTS CONTROL FRAME 
-    mac_framectrl = chr(0xC4) + chr(0x00)                                                  
+    mac_framectrl = chr(0xc4) + chr(0x00)                                                  
     mac_duration = chr(0x00) + chr(0x00)
     mac_ra = payload["mac_ra"]                                                  
       
@@ -329,7 +329,7 @@ def get_RTS_info(payload, regime, symboltime):
 def get_ACK_info(payload, regime, symboltime):
 
         # MAC header for a ACK CONTROL FRAME 
-    mac_framectrl = chr(0xD4) + chr(0x00)                                                  
+    mac_framectrl = chr(0xd4) + chr(0x00)                                                  
     mac_duration = chr(0x00) + chr(0x00)
     mac_ra = payload["mac_ra"]                                                  
     mac_seqctrl = chr(0x00) + chr(0x00)                                                  
@@ -980,7 +980,7 @@ def parse_mac(pkt):
         mac_ra=app[4]+app[5]+app[6]+app[7]+app[8]+app[9]
         info = {"packet":pkt, "RX_add":mac_ra}   
         ack = {"INFO":info} 
-        packet=create_packet(header,pkt)
+        packet=create_packet(header,ack)
     elif app[0]==chr(0x08) and app[1]==chr(0x00):
         header="DATA"
         txtime=ord(app[2])*256 + ord(app[3])
@@ -1264,8 +1264,8 @@ def generate_pkt(header, intrp, regimen, payld):
     Generates an 802.11 frame using the interpolation and OFDM coderegime values
     """
     tsymbol = get_Tsymbol(intrp)
-    datos = ftw_make(header, payld, regimen, tsymbol)
-    return datos
+    data = ftw_make(header, payld, regimen, tsymbol)
+    return data
 
 #def leer_capa_phy(port, header):
 def read_phy_response(port, header):
