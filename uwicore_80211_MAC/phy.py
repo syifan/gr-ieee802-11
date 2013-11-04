@@ -220,6 +220,7 @@ def RX_Client(options,my_mac,phy_rx_server):
         # PHY 802.11 frame arrival from the wireless medium
         pkt = phy_rx_client.recv(10000)
         arrived_packet=mac.parse_mac(pkt)
+        print arraived_packet
 
         if (arrived_packet["HEADER"]=="DATA" or arrived_packet["HEADER"]=="DATA_FRAG"):
             if arrived_packet["DATA"]["INFO"]["mac_add1"] == my_mac:  # Is the data packet addressed to this node? 
@@ -378,9 +379,10 @@ def main():
     rb.start()
 
     while 1:
-
+        print "in loop"
         socket_client, conn_addr = server.accept()     # Waiting a request from the MAC layer
         arrived_packet=plcp.receive_from_mac(socket_client) # Packet received from MAC
+        print arrived_packet
         if (arrived_packet["HEADER"]=="PKT"): 
             t_socket = time.time()-arrived_packet["DATA"]["INFO"]["timestamp"]
             t_socket_TOTAL =t_socket_TOTAL + t_socket   #Update the time used in the socket communication.
