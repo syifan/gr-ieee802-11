@@ -183,12 +183,12 @@ def main():
     while 1:
         #IDLE STATE
         if State == "IDLE":
-            # Is a RTS?
-            reply_phy1, packet_phy1 = MAC.read_phy_response(PHY_port, "RTS")
+            # Is there a DATA?
+            reply_phy1, packet_phy1 = MAC.read_phy_response(PHY_port, "DATA")
             print State
             if reply_phy1 == "YES":
                 verbose = True          # Show when the MAC is IDLE
-                x = packet_phy["INFO"] # DATA packet addressed to this station
+                x = packet_phy1["INFO"] # DATA packet addressed to this station
                 '''
                 #============================================================
                 # /TEST/ UNCOMMENT TO CHECK RTS/CTS FUNCTIONALITY
@@ -326,9 +326,9 @@ def main():
                 State = "TRANSMITTING_UNICAST"
             else:
                 tx = time.time()                
-                canal_en_bo, t = MAC.sense_channel(PHY_port)
+                ch_status, t = MAC.sense_channel(PHY_port)
                 
-                if canal_en_bo == "FREE": # Channel idle
+                if ch_status == "FREE": # Channel idle
                     BACKOFF = BACKOFF - 1
                     BO_first_time = 0 # Backoff process started, freeze CW value!
                     if BACKOFF > 0:    
@@ -387,10 +387,11 @@ def main():
             if WF_ACK_first_time == 1:
                 T_ACK = SIFS
             ta = time.time()
-            no_packet, packet_phy = MAC.read_phy_response(PHY_port, "ACK")
-            if no_packet == "YES":
+            any_packet, packet_phy = MAC.read_phy_response(PHY_port, "ACK")
+            if any_packet == "YES":
                 x = packet_phy["INFO"]            
-                print "[R]-[%s]-[DA:%s]-[duration:%f]-[IFM:1]" %(packet_phy["HEADER"],MAC.which_dir(x["RX_add"]),x["txtime"])
+                #print "[R]-[%s]-[DA:%s]-[duration:%f]-[IFM:1]" %(packet_phy["HEADER"],MAC.which_dir(x["RX_add"]),x["txtime"])
+                print "[R]-[ACK]-[DA:%s]-[IFM:1]" %(MAC.which_dir(x["RX_add"]))
                 '''
                 #============================================================
                 # /TEST/ UNCOMMENT TO CHECK RTS/CTS FUNCTIONALITY
@@ -433,7 +434,7 @@ def main():
                         if retx_retries < 0:
                             CW = CW_min 
                             State = "IDLE"
-                            MAC.remove_ul_buff_packet(MAC_port)
+                            MAC.remove_ul_buff_packet(MAC_port)  # drop the packet after maximum number of retries
                             first_tx = True
                             if options.V: print "| WAITING_FOR_ACK | Remove packet from upper layers | IDLE |"
                             N_FRAG = 0 
@@ -493,14 +494,14 @@ def main():
             no_packet, packet_phy = MAC.read_phy_response(PHY_port, "ACK")
             if no_packet == "YES": # ACK addressed to this station
                 x = packet_phy["INFO"]
-                print "[R]-[%s]-[DA: %s]-[duration:%f]-[IFM:1]" %(packet_phy["HEADER"],MAC.which_dir(x["RX_add"]),x["txtime"])
+                print "[R]-[ACK-FRAG]-[DA: %s]-[IFM:1]" %(MAC.which_dir(x["RX_add"]))
                 if fin_wait_ack_fragmented == True:  # Last fragment sent
                     if options.V: print "| WAIT_ACK_FRAGMENTED | All fragments acknowledged  | IDLE |"
                     State = "IDLE"
                     MAC.remove_ul_buff_packet(MAC_port)    # Remove the packet from upper layers
                     first_tx = True
                 else:
-                    print "[R]-[%s]-[DA:%s]-[duration:%f]-[IFM:1]" %(packet_phy["HEADER"],MAC.which_dir(x["RX_add"]),x["txtime"])
+                    print "[R]-[ACK-FRAG]-[DA:%s]-[IFM:1]" %(MAC.which_dir(x["RX_add"]))
                     if options.V: print "| WAIT_ACK_FRAGMENTED | ACK received | TRANSMITTING_FRAGMENTED_PACKET |"
                     State = "TRANSMITTING_FRAGMENTED_PACKET"
                 BACKOFF = 0
@@ -540,6 +541,7 @@ def main():
         #TRANSMITTING_ACK STATE  
         elif State == "TRANSMITTING_ACK":
             print State
+            #time.sleep(SIFS)
             values = {"duration":0, "mac_ra":dest_mac, "timestamp":time.time()} #dest_mac value copied from the previous Data packet
             ACK = MAC.generate_pkt("ACK", options.interp, options.regime, values)
             packet_ACK = MAC.create_packet("PKT", ACK)
