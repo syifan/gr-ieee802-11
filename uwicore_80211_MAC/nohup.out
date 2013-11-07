@@ -1,0 +1,36 @@
+linux; GNU C++ version 4.7.3; Boost_105300; UHD_003.005.004-138-g8521c392
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gnuradio/grc/gui/MainWindow.py", line 178, in new_page
+    file_path=file_path,
+  File "/usr/local/lib/python2.7/dist-packages/gnuradio/grc/gui/NotebookPage.py", line 47, in __init__
+    initial_state = flow_graph.get_parent().parse_flow_graph(file_path)
+  File "/usr/local/lib/python2.7/dist-packages/gnuradio/grc/base/Platform.py", line 112, in parse_flow_graph
+    open(flow_graph_file, 'r') #test open
+IOError: [Errno 2] No such file or directory: '/home/yifan/learnGNURadio/test1/test1.grc'
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gnuradio/grc/gui/MainWindow.py", line 178, in new_page
+    file_path=file_path,
+  File "/usr/local/lib/python2.7/dist-packages/gnuradio/grc/gui/NotebookPage.py", line 47, in __init__
+    initial_state = flow_graph.get_parent().parse_flow_graph(file_path)
+  File "/usr/local/lib/python2.7/dist-packages/gnuradio/grc/base/Platform.py", line 112, in parse_flow_graph
+    open(flow_graph_file, 'r') #test open
+IOError: [Errno 2] No such file or directory: '/home/yifan/learnGNURadio/test1/test1.grc'
+<<< Welcome to GNU Radio Companion 3.6.4.2 >>>
+
+Loading: "/home/yifan/learnGNURadio/test1/test1.grc"
+Error: [Errno 2] No such file or directory: '/home/yifan/learnGNURadio/test1/test1.grc'
+>>> Failure
+
+Loading: "/home/yifan/learnGNURadio/test1/test1.grc"
+Error: [Errno 2] No such file or directory: '/home/yifan/learnGNURadio/test1/test1.grc'
+>>> Failure
+
+Showing: ""
+
+Loading: "/home/yifan/Dropbox/Northeastern/Research/FullDuplex/gnuradio/802_11/gr-ieee802-11/examples/ofdm_rx.grc"
+>>> Done
+
+Showing: "/home/yifan/Dropbox/Northeastern/Research/FullDuplex/gnuradio/802_11/gr-ieee802-11/examples/ofdm_rx.grc"
+
+Showing: ""
