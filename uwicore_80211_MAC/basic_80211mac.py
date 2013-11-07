@@ -74,7 +74,7 @@ def main():
                         8 -> 54 (27) Mbit/s (QAM64 r=0.75)")
     parser.add_option("-n", "--node", type="intx", default=1,
                           help="Number of USRP2 node, [default=%default]")
-    parser.add_option("", "--beta", type="float", default=50000,
+    parser.add_option("", "--beta", type="float", default=1e6,
                           help="Scaling Time Parameter, [default=%default]")
     parser.add_option("-t", "--time_slot", type="float", default=9e-6,
                           help="Time slot value, [default=%default]")
@@ -289,15 +289,15 @@ def main():
                 #t_testC = time.time()
                 #assert (tslot - (t_testC-t_testB) >=0),"Timing Error. Please increase the beta parameter."
                 #time.sleep(tslot-(t_testC-t_testB))
-                assert (tslot - t >=0),"Timing Error. Please increase the beta parameter."
-                time.sleep(tslot-t)
+                #assert (tslot - t >=0),"Timing Error. Please increase the beta parameter."
+                #time.sleep(tslot-t)
                 if channel_in_wfd == "OCCUPIED":
                     chan = "OCCUPIED"
                 #t_csense = t_csense + (t_testC - t_testB)
                 t_csense = t_csense + t
                 n_sensing +=1          
-            assert (t_final - time.time() >=0),"Timing Error. Please increase the beta parameter."
-            time.sleep(t_final - time.time())
+            #assert (t_final - time.time() >=0),"Timing Error. Please increase the beta parameter."
+            #time.sleep(t_final - time.time())
             t_csense = t_csense/3
             # print "Wait_for_DIFS operation time = ", (time.time()-t_inicial) # DEBUG
             
