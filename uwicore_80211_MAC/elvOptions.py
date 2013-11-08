@@ -57,6 +57,8 @@ class ElvOption(object):
                             help="Port used for PHY RX [default=%default] ")
         self.parser.add_option("", "--PHYport", type="int", default=8013 ,
                             help="Port used for MAC-->PHY communication [default=%default] ")
+        self.parser.add_option("", "--MACport", type="intx", default=8001,
+                          help="MAC communication socket port, [default=%default]")
 
         self.parser.add_option("", "--real-time", action="store_true", default=False,
                             help="Attempt to enable real-time scheduling [default=%default]")
@@ -66,6 +68,25 @@ class ElvOption(object):
 
         self.parser.add_option("", "--nsym", type="int", default=1)
         self.parser.add_option("", "--modulation", type="string", default="bpsk")
+
+        self.parser.add_option("-i", "--interp", type="intx", default=10,
+                            help="USRP2 interpolation factor value, [default=%default]\
+                                    5  -> 802.11a/g, OFDM T_Symbol=4us, \
+                                    10 -> 802.11p, OFDM T_Symbol=8us")
+
+        self.parser.add_option("", "--beta", type="float", default=1e6,
+                          help="Scaling Time Parameter, [default=%default]")
+        self.parser.add_option("-t", "--time_slot", type="float", default=9e-6,
+                          help="Time slot value, [default=%default]")
+        self.parser.add_option("-B", "--BI", type="float", default=1,
+                          help="Beacon Interval (BI) value in seconds, [default=%default]")
+        self.parser.add_option("-S", "--SIFS", type="float", default=16e-6,
+                          help="Short Inter-frame space (SIFS) value, [default=%default]")
+        self.parser.add_option('', "--retx", action="store_true", default=False,
+                        help="Retransmissions enabled, [default=%default]")
+        self.parser.add_option('', "--RTS", action="store_true", default=True,
+                        help="RTS-threshold enabled, [default=%default]")
+
         (self.options, self.args) = self.parser.parse_args()
         ElvOption.option = self.options
 

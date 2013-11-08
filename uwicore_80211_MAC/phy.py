@@ -16,8 +16,7 @@ import random
 import threading
 
 import elvOptions
-from elvEvent import *;
-
+from elvEvent import *
 
 
 class receiver_block(gr.top_block):
@@ -268,7 +267,7 @@ class PHYLayer(object):
             # PHY 802.11 frame arrival from the wireless medium
             pkt = phy_rx_client.recv(10000)
             arrived_packet=mac.parse_mac(pkt)
-            ElvEvent("Received packet from receive block " + str(arrived_packet))
+            ElvEvent("Received packet from receive block: " + str(arrived_packet["HEADER"]))
             print arrived_packet
 
             if (arrived_packet["HEADER"]=="DATA" or arrived_packet["HEADER"]=="DATA_FRAG"):
@@ -395,7 +394,8 @@ class PHYLayer(object):
                     else:                                   # There are not packets
                         phy_pkt = plcp.create_packet("NO",[])
                     plcp.send_to_mac(self.socket_client,phy_pkt)  # Send the result (PHY packet) to MAC layer
-        except Exception:
+        except Exception as e:
+            print e
             self.socket_client.close()
             self.socket_client = None
 
@@ -462,11 +462,12 @@ class PHYLayer(object):
         """
             Start the threads
         """
-        ElvEvent("Phy (TX) layer started")
+        ElvEvent("Phy layer started")
         p1 = threading.Thread(target=self.process_data_from_device)
         p2 = threading.Thread(target=self.process_request_from_mac)
         p1.start()
         p2.start()
+
 
 
 def test_send_packet(phy):
@@ -481,7 +482,7 @@ def test_send_packet(phy):
                 'txtime': 186,
                 'N_sym': 18,
                 'N_data': 432,
-                'packet': '\x08\x00\x00\xba\x00P\xc2\x853\x10\x00P\xc2\x853\x0c\xff\xff\xff\xff\xff\xff\x00\x00PAQUETE_CAPA_SUPERIOR_3',
+                'packet': '\x08\x00\x00\xba\x00P\xc2\x853\x10\x00P\xc2\x853\x0c\xff\xff\xff\xff\xff\xff\x00\x00THIS IS TEST PACKET',
                 'rate': 0.5,
                 'MF': 0,
                 'packet_len': 51,
@@ -501,15 +502,15 @@ def test_send_packet(phy):
     }
     phy.send_packet(packet)
 
+
 def main():
-    parser = elvOptions.ElvOption()
-    #options = parser.get_options()
+    elvOptions.ElvOption()
     phy = PHYLayer()
     phy.run()
     while 1:
-        test_send_packet(phy)
+#         test_send_packet(phy)
         #phy.sense_carrier()
-        time.sleep(5)
+        time.sleep(1)
 
 
 if __name__ == '__main__':
